@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App";
 import components from "./components/UI";
 import router from "@/router/router";
-import directives from "@/components/directives";
+import directives from "@/directives";
 
 const app = createApp(App);
 
