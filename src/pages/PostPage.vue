@@ -1,6 +1,6 @@
 <template>
   <div>
-    <my-input v-model="searchQuery" placeholder="Search..." />
+    <my-input v-focus v-model="searchQuery" placeholder="Search..." />
 
     <div class="app__btns">
       <my-button @click="showDialog">
@@ -34,7 +34,7 @@
     />
     <div v-else>Loading...</div>
 
-    <div ref="observer" class="observer"></div>
+    <div v-intersection="loadMorePosts" class="observer"></div>
   </div>
 </template>
 
@@ -130,17 +130,17 @@ export default {
     this.fetchPosts();
 
     //load posts auto intersection observer API
-    const options = {
-      rootMargin: "0px",
-      threshold: 1.0,
-    };
-    const callback = (entries) => {
-      if (entries[0].isIntersecting && this.page < this.totalPages) {
-        this.loadMorePosts();
-      }
-    };
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(this.$refs.observer);
+    // const options = {
+    //   rootMargin: "0px",
+    //   threshold: 1.0,
+    // };
+    // const callback = (entries) => {
+    //   if (entries[0].isIntersecting && this.page < this.totalPages) {
+    //     this.loadMorePosts();
+    //   }
+    // };
+    // const observer = new IntersectionObserver(callback, options);
+    // observer.observe(this.$refs.observer);
   },
   computed: {
     sortedPosts() {
