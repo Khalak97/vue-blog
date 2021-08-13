@@ -2,16 +2,16 @@
   <div>
     <my-input v-focus v-model="searchQuery" placeholder="Search..." />
 
-    <div class="app__btns">
+    <div class="postAdd">
       <my-button @click="showDialog">
         Create post
       </my-button>
       <my-select v-model="selectedSort" :options="sortOptions" />
-    </div>
 
-    <my-dialog v-model:show="dialogVisible">
-      <PostForm @create="createPost" />
-    </my-dialog>
+      <my-dialog v-model:show="dialogVisible">
+        <PostForm @create="createPost" />
+      </my-dialog>
+    </div>
 
     <!-- <div class="page__wrapper">
       <div
@@ -174,13 +174,19 @@ export default {
   margin: 5px;
 }
 
+.postAdd {
+  display: flex;
+  justify-content: space-between;
+}
+
 .current-page {
   border: 3px solid blue;
 }
 
-.observer {
+/* .observer {
   width: 100%;
   height: 30px;
-  background-color: green;
-}
+  border: 1px solid teal;
+  border-radius: 5px;
+} */
 </style>

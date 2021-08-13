@@ -116,6 +116,7 @@ export default {
 .observer {
   width: 100%;
   height: 30px;
-  background-color: green;
+  border: 1px solid teal;
+  border-radius: 5px;
 }
 </style>

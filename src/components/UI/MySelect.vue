@@ -1,5 +1,5 @@
 <template>
-  <select value="modelValue" @change="changeOption">
+  <select class="selectSort" value="modelValue" @change="changeOption">
     <option disabled value="">Choose</option>
     <option v-for="option in options" :key="option.value" :value="option.value">
       {{ option.name }}
@@ -27,4 +27,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.selectSort {
+  height: 44px;
+  width: 200px;
+  background-color: white;
+  color: teal;
+  font-size: 18px;
+  border: 1px solid teal;
+  border-radius: 5px;
+}
+</style>

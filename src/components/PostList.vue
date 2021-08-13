@@ -1,6 +1,6 @@
 <template>
-  <div v-if="posts.length > 0">
-    <h3>List items</h3>
+  <div class="postList" v-if="posts.length > 0">
+    <h3 class="postList__header">List items:</h3>
     <transition-group name="post-list">
       <PostItem
         v-for:="post in posts"
@@ -10,7 +10,7 @@
       />
     </transition-group>
   </div>
-  <h3 v-else>List is empty!</h3>
+  <h3 class="postList__info" v-else>List is empty!</h3>
 </template>
 
 <script>
@@ -28,10 +28,13 @@ export default {
 </script>
 
 <style scoped>
-.post {
-  padding: 15px;
-  margin-top: 20px;
-  border: 1px solid black;
+.postList__header {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.postList__info {
+  font-size: 32px;
 }
 
 .post-list-item {
