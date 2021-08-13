@@ -20,4 +20,9 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Welcome!</h1>
+    <h1>Main page</h1>
   </div>
 </template>
 
@@ -8,4 +8,13 @@
 export default {};
 </script>
 
-<style scopeds></style>
+<style scoped>
+h1 {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  font-weight: 500;
+}
+</style>
